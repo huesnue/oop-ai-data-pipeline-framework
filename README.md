@@ -1,171 +1,117 @@
-<<<<<<< HEAD
-# Advanced Python: Object-Oriented Programming — Portfolio Project
+oop-ai-data-pipeline-framework
+A professional portfolio project demonstrating advanced object‑oriented programming in Python through a modular, extensible data‑pipeline framework.
 
-This repository is part of my 9‑week program to deepen advanced object‑oriented programming skills in Python.  
-It is inspired by the LinkedIn Learning course *Advanced Python: Object-Oriented Programming*, but structured and implemented as a **professional, extensible portfolio project**.
+🚀 Overview oop-ai-data-pipeline-framework is a growing, modular Python framework designed to simulate and orchestrate data pipelines for AI and machine‑learning workflows. The project serves a dual purpose:
 
----
+A professional, extensible data‑pipeline framework, and
 
-## 🎯 Project Goals
+A structured showcase of advanced object‑oriented programming concepts, implemented step by step following the LinkedIn course “Advanced Python: Object-Oriented Programming”.
 
-- Apply advanced OOP concepts in real-world Python code  
-- Implement and document key design patterns  
-- Use modern Python idioms (type hints, dataclasses, pathlib, packaging)  
-- Build a clean, modular, production‑grade architecture  
-- Add unit tests, logging, and a CLI interface  
-- Create a visible, recruiter‑ready engineering project  
+Each training section introduces a new OOP concept, which is then applied directly to the framework. This creates a transparent, traceable learning journey — ideal for recruiters and engineering teams evaluating your technical depth.
 
----
+🎯 Project Goals
 
-## 🧱 Project Structure
+Demonstrate mastery of advanced OOP techniques in Python
+Build a clean, extensible, production‑inspired data‑pipeline architecture
+Apply each course module to a real, evolving codebase
+Showcase engineering practices relevant to AI Engineering, MLOps, and Data Engineering
+Provide clear examples, documentation, and tests for each concept
+🧱 High-Level Architecture The framework is organized into two main areas:
 
-```text
-src/
-  oop_training/
-    models/
-    patterns/
-    utils/
-    cli/
-examples/
-tests/
-docs/
-.github/workflows/
+Framework Core Reusable, production‑style components:
+Base classes
+Descriptors
+Attribute‑handling logic
+Pipeline components (sources, transformers, validators, loaders)
+ML‑specific modules (preprocessing, feature engineering)
+Training Showcase A structured collection of modules, each representing one section of the OOP training:
+Section 01 — Attribute Mechanics
+Section 02 — Inheritance & Composition
+Section 03 — Abstract Base Classes & Interfaces
+Section 04 — Iterators & Generators
+Section 05 — Design Patterns
+…and more as the course progresses
+Each section contains:
 
-src/ → Production code
+Concept explanation
+Implementation inside the framework
+Example usage
+Notes and reflections
 
-examples/ → Recreated course examples
+📁 Suggested Project Structure
 
-tests/ → Unit tests
+oop-ai-data-pipeline-framework/
+│
+├── framework/
+│   ├── core/
+│   │   ├── pipeline_component.py
+│   │   ├── descriptors.py
+│   │   └── attribute_debug.py
+│   │
+│   ├── components/
+│   │   ├── data_sources/
+│   │   ├── transformers/
+│   │   ├── validators/
+│   │   └── loaders/
+│   │
+│   └── ml/
+│       ├── preprocessors/
+│       └── feature_engineering/
+│
+├── training_showcase/
+│   ├── section_01_attribute_mechanics/
+│   ├── section_02_inheritance/
+│   ├── section_03_abstract_classes/
+│   ├── section_04_iterators/
+│   └── section_05_design_patterns/
+│
+├── examples/
+│   ├── basic_pipeline.py
+│   └── ml_pipeline.py
+│
+├── tests/
+├── docs/
+│   ├── architecture.md
+│   ├── roadmap.md
+│   └── section_notes/
+│
+└── README.md
+🧩 Training Sections (Showcase) Section 01 — Attribute Mechanics Topics implemented:
 
-docs/ → Architecture, UML diagrams, design decisions
+Attribute resolution (dict, class, mro)
+Properties (computed attributes, getters/setters)
+Dynamic attributes (getattr, setattr)
+Memory optimization with slots
+Name mangling for internal attributes
+Descriptors for validated configuration fields
+Each concept is applied to the PipelineComponent base class.
 
-.github/ → CI/CD workflows
+🧪 Examples A minimal example pipeline:
 
----
+python
 
-🧠 Learning Focus Areas
-1. OOP Fundamentals (Chapter 1)
-Classes & objects
+from framework.core.pipeline_component import PipelineComponent
+from framework.components.transformers import NormalizeTransformer
 
-Attributes & methods
+source = DummyDataSource(name="input")
+transformer = NormalizeTransformer(name="normalize")
+loader = PrintLoader(name="output")
 
-Encapsulation
+pipeline = [source, transformer, loader]
 
-Magic methods
-
-2. Inheritance & Polymorphism (Chapter 2)
-Single & multiple inheritance
-
-Method overriding
-
-Mixins
-
-3. Advanced Concepts (Chapter 3)
-Abstract base classes
-
-Interfaces
-
-Composition vs. inheritance
-
-4. Design Patterns (Chapter 4)
-Strategy
-
-Observer
-
-Factory
-
-Singleton
-
-Template Method
-
-### Class Creation Utilities
-
-This module contains helper functions and utility classes that support the creation, configuration, and management of Python classes.  
-The goal is to demonstrate how reusable utilities can simplify class construction, enforce consistent initialization logic, and reduce boilerplate across a larger codebase.
-
-Key topics covered include:
-
-- Utility functions for building and initializing classes  
-- Reusable constructors and factory helpers  
-- Encapsulating complex setup logic outside of the class itself  
-- Improving maintainability by centralizing class‑creation patterns  
-- Demonstrating when to prefer utilities over inheritance or mixins  
-
-These utilities illustrate how larger Python systems benefit from clean separation between *what* a class represents and *how* it is created.
-
----
-
-🧪 Testing
-Unit tests are implemented using pytest.
-
-```bash
-pytest -q
-```
-
----
-
-🛠️ Installation & Setup
-
-```bash
-git clone <your-repo-url>
-cd advanced-python-oop
-pip install -e .
-```
-
----
-
-🚀 CLI (Optional)
-The project includes an optional CLI to run selected examples or pattern demonstrations.
-
-```bash
-python -m oop_training.cli
-
-```
-
----
-
-📚 Documentation
-The docs/ directory contains:
-
-Architecture overview
-
-UML diagrams
-
-Design decisions
-
-Pattern summaries
-
----
+for component in pipeline:
+    component.run()
+More examples can be found in the examples/ directory.
 
 🗺️ Roadmap
-[ ] Recreate examples from Chapter 1
 
-[ ] Extend models from Chapter 2
+Add more pipeline components
+Introduce abstract base classes for pipeline stages
+Implement iterator‑based pipeline execution
+Add design patterns (Factory, Strategy, Observer)
+Extend ML preprocessing modules
+Add unit tests and CI workflows
+Expand documentation and diagrams
+🤝 Contributions This project is primarily a personal learning and portfolio showcase, but suggestions and improvements are welcome.
 
-[ ] Implement patterns from Chapter 3 and 4
-
-[ ] Add unit tests for all modules
-
-[ ] Add logging and configuration management
-
-[ ] Expand CLI functionality
-
-[ ] Add UML diagrams
-
-[ ] Finalize CI/CD workflow
-
----
-
-📄 License
-MIT License
-
----
-
-👤 Author
-Hüsnü Türkac
-Senior Quality Manager → AI/MLOps Engineer (in transition)
-
-=======
-# advanced-oop-training
-Professional portfolio project for mastering advanced object-oriented programming in Python.
->>>>>>> 3f9b4d8d97e6f1cc671465e6059c394230757090
+📄 License MIT License
