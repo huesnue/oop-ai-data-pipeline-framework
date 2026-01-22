@@ -1,7 +1,9 @@
 # oop-ai-data-pipeline-framework
 A professional portfolio project demonstrating advanced object‑oriented programming in Python through a modular, extensible data‑pipeline framework.
 
-🚀 Overview
+---
+
+## 🚀 Overview
 oop-ai-data-pipeline-framework is a growing, modular Python framework designed to simulate and orchestrate data pipelines for AI and machine‑learning workflows.
 The project serves a dual purpose:
 
@@ -12,14 +14,18 @@ A structured showcase of advanced object‑oriented programming concepts, implem
 Each training section introduces a new OOP concept, which is then applied directly to the framework.
 This creates a transparent, traceable learning journey — ideal for recruiters and engineering teams evaluating your technical depth.
 
-🎯 Project Goals
+---
+
+## 🎯 Project Goals
 - Demonstrate mastery of advanced OOP techniques in Python
 - Build a clean, extensible, production‑inspired data‑pipeline architecture
 - Apply each course module to a real, evolving codebase
 - Showcase engineering practices relevant to AI Engineering, MLOps, and Data Engineering
 - Provide clear examples, documentation, and tests for each concept
 
-🧱 High-Level Architecture
+---
+
+## 🧱 High-Level Architecture
 The framework is organized into two main areas:
 
 1. Framework Core
@@ -45,9 +51,13 @@ Each section contains:
 - Implementation inside the framework
 - Example usage
 
-Notes and reflections
+---
 
-📁 Suggested Project Structure
+## Notes and reflections
+
+---
+
+## 📁 Suggested Project Structure
 
 ```
 oop-ai-data-pipeline-framework/
@@ -86,25 +96,27 @@ oop-ai-data-pipeline-framework/
 │   └── section_notes/
 │
 └── README.md
+
 ```
 
-🧩 Training Sections (Showcase)
-Section 01 — Attribute Mechanics
+## 🧩 Training Sections (Showcase)
+### Section 01 — Attribute Mechanics
 Topics implemented:
-- Attribute resolution (__dict__, __class__, __mro__)
+- Attribute resolution (`__dict__`, `__class__`, `__mro__`)
 - Properties (computed attributes, getters/setters)
-- Dynamic attributes (__getattr__, __setattr__)
-- Memory optimization with __slots__
+- Dynamic attributes (`__getattr__`, `__setattr__`)
+- Memory optimization with `__slots__`
 - Name mangling for internal attributes
 - Descriptors for validated configuration fields
 
 Each concept is applied to the PipelineComponent base class.
 
-🧪 Examples
+---
+
+## 🧪 Examples
 A minimal example pipeline:
 
-python
-```
+``` python
 from framework.core.pipeline_component import PipelineComponent
 from framework.components.transformers import NormalizeTransformer
 
@@ -119,7 +131,9 @@ for component in pipeline:
 ```
 More examples can be found in the examples/ directory.
 
-🗺️ Roadmap
+---
+
+## 🗺️ Roadmap
 - Add more pipeline components
 - Introduce abstract base classes for pipeline stages
 - Implement iterator‑based pipeline execution
@@ -128,8 +142,12 @@ More examples can be found in the examples/ directory.
 - Add unit tests and CI workflows
 - Expand documentation and diagrams
 
-🤝 Contributions
+---
+
+## 🤝 Contributions
 This project is primarily a personal learning and portfolio showcase, but suggestions and improvements are welcome.
 
-📄 License
+---
+
+## 📄 License
 MIT License
