@@ -49,7 +49,7 @@ Each section contains:
 ---
 
 ## 📁 Suggested Project Structure
-
+```
 oop-ai-data-pipeline-framework/
 │
 ├── framework/
